@@ -1,36 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatShare</title>
-    <link rel="icon" href="/static/images/logo.ico" type="image/x-icon">
+    <title>PDF to Audiobook Converter</title>
     <link rel="stylesheet" href="/static/css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Exo:400,700" rel="stylesheet">
 </head>
-
 <body>
-    <div class="area">
-        <div class="circles">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+    <div class="container">
+        <h1>PDF to Audiobook Converter</h1>
+        <div class="upload-section">
+            <label for="pdfUpload" class="upload-label">Choose a PDF file to convert:</label>
+            <input type="file" id="pdfUpload" accept=".pdf">
+            <button onclick="uploadFile()">Upload & Convert</button>
+            <div id="outputMessage"></div>
+            <div id="progressContainer" style="display: none;">
+                <progress id="progressBar" value="0" max="100"></progress>
+                <span id="progressText">0%</span>
+            </div>
         </div>
     </div>
-    <div class="context">
-        <h1>Coding Craft YT</h1>
-        <h3>Taking Your Flask Project Beyond Localhost!</h3>
-    </div>
-</body>
+    <script src="/static/js/script.js"></script>
 
+</body>
 </html>
